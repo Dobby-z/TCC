@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOS Online</title>
+    <link rel="stylesheet" href="">
+    <link rel="shortcut icon" href="logo.ico.png" type="image/x-icon">
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700);
+        body {
+            font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background: radial-gradient(circle, rgb(161, 41, 47), #550000);
+            font-size: 13px;
+            margin: 0;
+            padding: 0;
+        }
+
+        #header {
+            padding: 2rem;
+        }
+
+        #menu {
+            background: rgb(230, 56, 65);
+            height: 100%;
+            left: 0;
+            opacity: 0;
+            overflow: hidden;
+            position: fixed;
+            text-align: center;
+            top: 0;
+            transition: all 0.7s ease-in-out;
+            visibility: hidden;
+            width: 100%;
+            z-index: 1100;
+        }
+        #menu.open {
+            opacity: 1;
+            visibility: visible;
+        }
+        #menu.open li:nth-child(1) { animation-delay: 0.1s; }
+        #menu.open li:nth-child(2) { animation-delay: 0.2s; }
+        #menu.open li:nth-child(3) { animation-delay: 0.3s; }
+        #menu.open li:nth-child(4) { animation-delay: 0.4s; }
+        #menu.open li:nth-child(5) { animation-delay: 0.5s; }
+        #menu.open li:nth-child(6) { animation-delay: 0.6s; }
+        #menu.open li:nth-child(7) { animation-delay: 0.7s; }
+        #menu.open li:nth-child(8) { animation-delay: 0.8s; }
+        #menu.open li:nth-child(9) { animation-delay: 0.9s; }
+        #menu.open li:nth-child(10) { animation-delay: 1s; }
+        #menu.open li { animation-duration: 1s; animation-fill-mode: both; animation-name: fadeInUp; }
+        #menu ul:hover a { opacity: 0.5; }
+        #menu ul a { transform: translateZ(0); transition: opacity 0.3s ease-in-out; }
+        #menu ul a:hover { opacity: 1; }
+        #menu .main-nav { position: relative; top: 50%; transform: translateY(-50%); }
+        #menu .main-nav ul { list-style: none; margin: 0; padding: 0; }
+        #menu .main-nav a { color: #ffffff; display: block; font-size: 2.5rem; font-weight: bold; padding: 1rem 1rem; text-decoration: none; text-transform: uppercase; }
+        #menu .main-nav a:first-child { padding-top: 0; }
+        #menu .menu-footer { padding: 2rem; bottom: 0; left: 0; position: absolute; right: 0; }
+        #menu .menu-footer ul { display: inline-block; list-style: none; margin: 0; padding: 0; }
+        #menu .menu-footer ul li { display: inline; margin: 0 1rem; }
+        #menu .menu-footer a { color: #ffffff; text-decoration: none; text-transform: uppercase; }
+
+        .toggle-menu {
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            height: 500px;
+            padding: 0;
+            position: relative;
+            width: 500px;   
+            text-align: center;
+            line-height: 0; /* Remove extra space below the image */
+            margin-top: 100px;
+        }
+        .toggle-menu img {
+            display: block;
+            max-width: 100%; /* Ensure image fits within button */
+            max-height: 100%; /* Ensure image fits within button */
+            margin: 0 auto; /* Center the image horizontally */
+        }
+
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <nav class="nav">
+            <center>
+            <button class="toggle-menu">
+                <img src="logo-removebg-preview (1).png" alt="Menu Icon">
+            </button>
+            </center>
+        </nav>
+    </header>
+
+    <div id="menu" class="">
+        <nav class="main-nav">
+            <ul>
+                <li><a href="ligue.html">Contatos</a></li>
+                <li><a href="emergencia.html">Emergências</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.toggle-menu').click(function() {
+                $(this).toggleClass('active');
+                $('#menu').toggleClass('open');
+            });
+        });
+    </script>
+</body>
+</html>

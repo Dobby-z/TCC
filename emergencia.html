@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOS Online</title>
+    <link rel="stylesheet" href="styleemg.css">
+    <link rel="shortcut icon" href="logo.ico.png" type="image/x-icon">
+
+</head>
+<body>
+    <!--INCIO DA NAV-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link rel="stylesheet" href="responsive-nav.css">
+<script src="responsive-nav.js"></script>
+
+<section id=showcase>
+    <nav class=navbar>
+      <p class=logo><a href=#>SOS<span>ONLINE</span></a></p>
+
+      <h1 style="color: white; font-size: 25px; align-items: center;">EMERGÊNCIAS</h1>
+
+        <a class=link href='ligue.html'><b>LIGUE</b></a>
+    </nav><br><br><br><br>
+
+<script>
+    $(document).ready(function () {
+    var scroll_start = 0;
+    var startchange = $(".title");
+    var offset = startchange.offset();
+
+
+  
+    if (startchange.length) {
+        $(document).scroll(function () {
+            scroll_start = $(this).scrollTop();
+            if (scroll_start > offset.top) {
+                $(".navbar").css('background-color', 'rgba(255,255,255,.9)');
+                $(".menu").css('color', 'rgb(0,0,0)');
+                $(".logo a").css('color', 'rgb(0,0,0)');
+              
+            } else {
+                $('nav').css('background-color', 'transparent');
+                $(".menu").css('color', 'rgb(255,255,255)');
+                $(".logo a").css('color', 'rgb(255,255,255)');
+            }
+        });
+    }
+});
+</script>
+    <!--FIM DA NAV-->
+    <!--INICIO MAIN 1-->
+    <div id="main1">
+        <center>
+        <a href="Quedas.html" class="botao-link"><button class="bs" id="emg1"><b>QUEDAS</b</button></a>
+        <a href="Afogamento.html" class="botao-link"><button class="bs" id="emg2"><b>AFOGAMENTO</b</button></a>
+        <a href="Convulsão.html" class="botao-link"><button class="bs" id="emg3"><b>CONVULSÃO</b</button></a>
+        <a href="engasgo.html" class="botao-link"><button class="bs" id="emg4"><b>ENGASGO</b</button></a>
+        <a href="Queimaduras.html" class="botao-link"><button class="bs" id="emg5"><b>QUEIMADURA</b</button></a>
+        <a href="choque.html" class="botao-link"><button class="bs" id="emg6"><b>CHOQUE</b</button></a>
+        <a href="corte.html" class="botao-link"><button class="bs" id="emg7"><b>CORTE</b</button></a>
+        <a href="desmaio.html" class="botao-link"><button class="bs" id="emg8"><b>DESMAIO</b</button></a>
+        <a href="Incêndio.html" class="botao-link"><button class="bs" id="emg9"><b>INCÊNDIO</b</button></a>
+        </center>
+    </div>
+    <!--FIM MAIN1-->
+    <!--INICIO DO FOOTER-->
+    <div id="footer">
+        <center>
+        <img src="miau.webp" alt="" id="miau">
+        </center>
+    </div>
+    <!--FIM DO FOOTER-->
+</body>
+</html>
